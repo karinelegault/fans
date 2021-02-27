@@ -1,4 +1,6 @@
 class Booking < ApplicationRecord
-  belongs_to :fan, :user
-  validates :start_date, :end_date, presence: true
+  belongs_to :fan
+  belongs_to :user
+  validates :start_date, presence: true
+  validates :end_date, presence: true
 end
