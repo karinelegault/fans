@@ -1,0 +1,13 @@
+<% @fans.each do |fan| %>
+<p><%= fan.name  %></p>
+<p><%= fan.description  %></p>
+<p><%= fan.price  %></p>
+    <div>
+        <%= link_to "Go see", fan_path(fan)%>
+        <%= link_to "Delete", fan_path(fan), method: :delete, data: {confirm: "Are you sure you want to delete #{fan.name}"}%>
+        <%= link_to "Edit", edit_fan(fan)%>
+    </div>
+<p>*******************************</p>
+<% end %>
+
+<%= link_to "Create New Fan", new_fan_path %>
