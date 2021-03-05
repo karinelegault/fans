@@ -1,18 +1,20 @@
 class FansController < ApplicationController
 
     def new
-        @fans = Fan.new
+        @fan = Fan.new
     end
 
-    def edit
-        @fans.update(fans_params)
-        redirect_to fans_path(@fans)
-    end
+    # def edit
+    #     # raise
+    #     @fan.update(params[:id])
+    #     redirect_to fans_path(@fans)
+    # end
 
     def create
-        @fans = Fan.new(fans_params)
-        if @fans.save
-            redirect_to root_path(@fans)
+        @fan = Fan.new(fans_params)
+        @fan.user = current_user
+        if @fan.save
+            redirect_to fan_path(@fan)
         else
             render :new
         end
