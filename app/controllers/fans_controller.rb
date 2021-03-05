@@ -1,5 +1,6 @@
 class FansController < ApplicationController
 
+
     def new
         @fan = Fan.new
     end
@@ -19,12 +20,20 @@ class FansController < ApplicationController
             render :new
         end
     end
-
-    private
   
-    def fans_params
-        params.require(:fan).permit(:name, :description)
+     def index
+        @fans = Fan.all
     end
+    
+  def show
+    @fan = Fan.find(params[:id])
+    @booking = Booking.new
+  end
+  
+  private
 
+  def fans_params
+    params.require(:fans).permit(:name, :description, :price, :user_id, :photo)
+  end
 
 end
