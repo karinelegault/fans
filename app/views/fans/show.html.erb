@@ -1,8 +1,9 @@
 <div class="container">
-  <h1><%= @fans.name %></h1>
+  <h1><%= @fan.name %></h1>
   <%= link_to "Back to all fans", root_path %>
   <br>
-  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+  <%# We'll do the cloudinary photos aftewards. %>
+  <%# <%= cl_image_tag @fan.photo, height: 300, width: 400, crop: :fill %> 
 
 
   <div class="row">
