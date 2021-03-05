@@ -4,7 +4,7 @@ class FansController < ApplicationController
     def new
         @fan = Fan.new
     end
-
+# No need for edit right now, therefore  I comment it out (paslm)
     # def edit
     #     # raise
     #     @fan.update(params[:id])
@@ -29,11 +29,16 @@ class FansController < ApplicationController
     @fan = Fan.find(params[:id])
     @booking = Booking.new
   end
+
+  def destroy
+    @fan = Fan.find(params[:id])
+    @fan.destroy
+  end
   
   private
 
   def fans_params
-    params.require(:fans).permit(:name, :description, :price, :user_id, :photo)
+    params.require(:fan).permit(:name, :description, :price, :user_id)
   end
 
 end
