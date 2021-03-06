@@ -2,7 +2,10 @@
 
 <div class="container">
   <h1><%= @fan.name %></h1>
+  <h1><%= @fan.id %></h1>
   <%= link_to "Back to all fans", fans_path  %>
+  <%= link_to "Create Booking", new_fan_booking_path(@fan) %>
+  <%# <%= link_to "Add Dosage", new_cocktail_dose_path(@cocktail) %> 
   <br>
   <%# We'll do the cloudinary photos aftewards. (paslm)%>
   <%# <%= cl_image_tag @fan.photo, height: 300, width: 400, crop: :fill %> 
