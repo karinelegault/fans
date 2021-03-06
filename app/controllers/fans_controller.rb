@@ -4,7 +4,7 @@ class FansController < ApplicationController
     def new
         @fan = Fan.new
     end
-
+# No need for edit right now, therefore  I comment it out (paslm)
     # def edit
     #     # raise
     #     @fan.update(params[:id])
@@ -21,13 +21,21 @@ class FansController < ApplicationController
         end
     end
 
+
      def index
         @fans = Fan.all
-     end
+    end
+
 
   def show
     @fan = Fan.find(params[:id])
     @booking = Booking.new
+  end
+
+
+  def destroy
+    @fan = Fan.find(params[:id])
+    @fan.destroy
   end
 
   private

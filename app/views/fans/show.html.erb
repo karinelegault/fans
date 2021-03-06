@@ -22,3 +22,16 @@
   </div>
 
 </div>
+<p id="notice" style="color: green" text-center><%= notice %></p>
+
+<div class="container">
+  <h1><%= @fan.name %></h1>
+  <%= link_to "Back to all fans", fans_path  %>
+  <br>
+  <%# We'll do the cloudinary photos aftewards. (paslm)%>
+  <%# <%= cl_image_tag @fan.photo, height: 300, width: 400, crop: :fill %>
+
+
+<div>
+<%= @fan.description %>
+</div>
