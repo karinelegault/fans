@@ -1,38 +1,22 @@
 <div class="container">
-
   <h1><%= @fan.name %></h1>
-  <%= link_to "Back to all fans", root_path %>
-  <br>
-  <%# We'll do the cloudinary photos aftewards. %>
-  <%# <%= cl_image_tag @fan.photo, height: 300, width: 400, crop: :fill %>
 
-
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <h3>Fans</h3>
-      <table class="table table-bordered">
-        <tbody>
-          <thead>
-            <th>Description</th>
-            <th>Price</th>
-          </thead>
-        </tbody>
-
-      </table>
-    </div>
-  </div>
-
-</div>
-<p id="notice" style="color: green" text-center><%= notice %></p>
-
-<div class="container">
-  <h1><%= @fan.name %></h1>
-  <%= link_to "Back to all fans", fans_path  %>
-  <br>
   <%# We'll do the cloudinary photos aftewards. (paslm)%>
   <%# <%= cl_image_tag @fan.photo, height: 300, width: 400, crop: :fill %>
 
+<div class="card-trip">
+  <img src="https://images.unsplash.com/photo-1581475802168-52bf225f742e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2467&q=80" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @fan.name %></h2>
+      <p><%= @fan.description %></p>
+    </div>
+    <h2 class="card-trip-pricing">$19.99</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
 
-<div>
-<%= @fan.description %>
 </div>
+      <%= link_to "Back to all fans", fans_path, class: "btn btn-primary" %>
+</div>
+
+
