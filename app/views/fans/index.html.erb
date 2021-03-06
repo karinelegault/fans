@@ -1,19 +1,18 @@
-<div class="container text-center">
-  <%= link_to "Create New Fan", new_fan_path %>
+<div class="container">
+  <%= link_to "Create New Fan", new_fan_path, class: "btn btn-gradient-new"%>
 
-  <div class="cards">
-    <% @fans.each do |fan| %>
-      <div class="card-category">
-        <div class="card-description">
-        <p><%= fan.name  %></p>
-        <p><%= fan.description  %></p>
-        <p><%= fan.price  %></p>
-        </div>
-        <div class="card-links">
-          <%= link_to "Go see", fan_path(fan)%>
-          <%= link_to "Delete", fan_path(fan), method: :delete, data: {confirm: "Are you sure you want to delete #{fan.name}"}%>
-        </div>
+<div class="card-grid">
+  <% @fans.each do |fan| %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= fan.name  %></h2>
+      <p><%= fan.description  %></p>
+      <p><%= fan.price  %></p>
+      <div>
+          <%= link_to "More infos", fan_path(fan), class: "btn btn-gradient"%>
+          <%= link_to "Delete", fan_path(fan), class: "btn btn-ghost", method: :delete, data: {confirm: "Are you sure you want to delete #{fan.name}"}%>
+
       </div>
-    <% end %>
+    </div>
   </div>
-</div>

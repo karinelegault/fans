@@ -1,9 +1,14 @@
 <div class="container">
 
-<%= simple_form_for @fan do |f| %>
+  <div class="form-card">
+
+    <%= simple_form_for @fan do |f| %>
         <%= f.input :name %>
         <%= f.input :description %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
+        <%= f.input :price %>
+        <%= f.button :submit, class: 'btn-gradient' %>
     <% end %>
+
+  </div>
 
 </div>
