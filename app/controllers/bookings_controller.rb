@@ -1,20 +1,36 @@
 class BookingsController < ApplicationController
   def new
+  
     @fan = Fan.find( params[:fan_id])
     @booking = Booking.new
   end
 
   def create
-  
+ 
     @fan = Fan.find(params[:fan_id])
     @booking = Booking.new(booking_params)
     @booking.fan = @fan
+    @booking.user_id = current_user.id
+    @booking.status = "pending"
     if @booking.save
       redirect_to fan_path(@fan)
     else
       render "fans/show"
     end
   end
+
+  def incoming_bookings
+    fans = Fan.where(user: current_user)
+    my_bookings = fans.map { |fan| fan.bookings}
+    @bookings = my_bookings.flatten
+
+  end
+
+  def outgoing_bookings
+    @bookings = Booking.where(user_id: current_user.id)
+  end
+
+  
 
   private
   
