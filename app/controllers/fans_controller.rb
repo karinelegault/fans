@@ -20,21 +20,24 @@ class FansController < ApplicationController
             render :new
         end
     end
-  
+
+
      def index
         @fans = Fan.all
     end
-    
+
+
   def show
     @fan = Fan.find(params[:id])
     @booking = Booking.new
   end
 
+
   def destroy
     @fan = Fan.find(params[:id])
     @fan.destroy
   end
-  
+
   private
 
   def fans_params
