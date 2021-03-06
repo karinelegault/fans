@@ -1,13 +1,19 @@
-<% @fans.each do |fan| %>
-<p><%= fan.name  %></p>
-<p><%= fan.description  %></p>
-<p><%= fan.price  %></p>
-    <div>
-        <%= link_to "Go see", fan_path(fan)%>
-        <%= link_to "Delete", fan_path(fan), method: :delete, data: {confirm: "Are you sure you want to delete #{fan.name}"}%>
+<div class="container text-center">
+  <%= link_to "Create New Fan", new_fan_path %>
 
-    </div>
-<p>*******************************</p>
-<% end %>
-
-<%= link_to "Create New Fan", new_fan_path %>
+  <div class="cards">
+    <% @fans.each do |fan| %>
+      <div class="card-category">
+        <div class="card-description">
+        <p><%= fan.name  %></p>
+        <p><%= fan.description  %></p>
+        <p><%= fan.price  %></p>
+        </div>
+        <div class="card-links">
+          <%= link_to "Go see", fan_path(fan)%>
+          <%= link_to "Delete", fan_path(fan), method: :delete, data: {confirm: "Are you sure you want to delete #{fan.name}"}%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
