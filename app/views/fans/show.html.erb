@@ -1,10 +1,27 @@
-<div class="container">
+<div class="container text-center">
   <%# We'll do the cloudinary photos aftewards. %>
   <%# <%= cl_image_tag @fan.photo, height: 300, width: 400, crop: :fill %>
-      <h1><%= @fan.name %></h1>
-      <p><%= @fan.description %></p>
-      <p><%= @fan.price %></p>
+
 
 <p id="notice" style="color: green" text-center><%= notice %></p>
   <%= link_to "Back to all fans", fans_path, class: "btn-flat"  %>
+</div>
+
+<div class="card-trip">
+  <img src="https://images.unsplash.com/photo-1588001895517-cb4c7fe6b392?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2547&q=80" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @fan.name %></h2>
+      <p><%= @fan.description %></p>
+    </div>
+    <h2 class="card-trip-pricing">$9.99</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="card-trip-user avatar-bordered" />
+
+  </div>
+  <div class="booking-btn m-3">
+        <%= link_to "Book now", fans_path, class: "btn-flat"  %>
+        <%= link_to "Contact Seller", "#", class: "btn-flat"  %>
+
+  </div>
+
 </div>
