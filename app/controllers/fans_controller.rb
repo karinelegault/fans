@@ -3,6 +3,11 @@ class FansController < ApplicationController
     def new
         @fan = Fan.new
     end
+
+    def my_fans
+      @fans = Fan.where(user_id: current_user.id)
+  
+    end
 # No need for edit right now, therefore  I comment it out (paslm)
     # def edit
     #     # raise
