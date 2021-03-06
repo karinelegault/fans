@@ -1,0 +1,7 @@
+<% @fans.each do |fan| %>
+    <p><%= fan.name  %></p>
+    <p><%= fan.description  %></p>
+    <p><%= fan.price  %></p>
+    <p>********************************</p>
+<% end %>
+<%= link_to "Back to index", fans_path  %>
