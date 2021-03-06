@@ -20,16 +20,16 @@ class FansController < ApplicationController
             render :new
         end
     end
-  
+
      def index
         @fans = Fan.all
-    end
-    
+     end
+
   def show
     @fan = Fan.find(params[:id])
     @booking = Booking.new
   end
-  
+
   private
 
   def fans_params
