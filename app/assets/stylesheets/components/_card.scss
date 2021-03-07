@@ -1,9 +1,9 @@
 .container-grid {
-  width: 1000px;
-  margin: auto;
+  margin: 0 -75px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 30px;
+  grid-gap: 30px;
 }
 
 .card-product-index {
@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   margin-top: 30px;
+  border-radius: 16px;
   width: 400px;
 }
 
