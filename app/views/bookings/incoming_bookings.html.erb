@@ -1,11 +1,22 @@
-<h2>My incoming bookings</h2>
-<% @bookings.each do |booking| %>
-<div>
-    <p><%= booking.fan.name %></p>
-    <p><%= booking.start_date %></p>
-    <p><%= booking.end_date %></p>
-    <p><%= booking.status %></p>
-    <p>************************</p>
+<div class="container text-center">
+  <h2>My fans bookings</h2>
+
+<table>
+  <tr>
+    <th>Fan name</th>
+    <th>Booking starting date</th>
+    <th>Booking end date</th>
+    <th>Status</th>
+  </tr>
+  <% @bookings.each do |booking| %>
+  <tr>
+    <td><%= booking.fan.name %></td>
+    <td><%= booking.start_date %></td>
+    <td><%= booking.end_date %></td>
+    <td><%= booking.status %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Back to all fans", root_path, class: "btn-gradient-new" %>
 </div>
-<% end %>
-<%= link_to "Back to all fans", root_path %>

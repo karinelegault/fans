@@ -1,7 +1,21 @@
-<% @fans.each do |fan| %>
-    <p><%= fan.name  %></p>
-    <p><%= fan.description  %></p>
-    <p><%= fan.price  %></p>
-    <p>********************************</p>
-<% end %>
+<div class="container">
+  <div class="container-grid">
+    <% @fans.each do |fan| %>
+    <div class="card-grid-index">
+      <div class="card-product-index">
+        <img src="https://images.unsplash.com/photo-1612549672719-2f1a3908ae31?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80" />
+        <div class="card-product-infos-index">
+          <h2><%= fan.name  %></h2>
+          <p><%= fan.description  %></p>
+          <p><%= fan.price  %></p>
+          <div>
+              <%= link_to "More infos", fan_path(fan), class: "btn btn-gradient"%>
+              <%= link_to "Delete", fan_path(fan), class: "btn btn-ghost", method: :delete, data: {confirm: "Are you sure you want to delete #{fan.name}"}%>
+          </div>
+        </div>
+      </div>
+   </div>
+   <% end  %>
+  </div>
 <%= link_to "Back to index", fans_path  %>
+</div>

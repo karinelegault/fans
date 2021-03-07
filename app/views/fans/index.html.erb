@@ -3,11 +3,10 @@
   <div class="container text-center mb-5">
     <h1> <strong>Fans around you</strong> to <strong>creative people</strong>!</h1>
     <p>Change your life and live a fresh life.</p>
-    <%= link_to "See all our fans", fans_path, class: "btn-flat"  %>
+    <%= link_to "Create New Fan", new_fan_path, class: "btn btn-gradient-new"%>
   </div>
 </div>
 <div class="container">
-  <%= link_to "Create New Fan", new_fan_path, class: "btn btn-gradient-new"%>
   <div class="container-grid">
     <% @fans.each do |fan| %>
     <div class="card-grid-index">
@@ -19,7 +18,6 @@
           <p><%= fan.price  %></p>
           <div>
               <%= link_to "More infos", fan_path(fan), class: "btn btn-gradient"%>
-              <%= link_to "Delete", fan_path(fan), class: "btn btn-ghost", method: :delete, data: {confirm: "Are you sure you want to delete #{fan.name}"}%>
           </div>
         </div>
       </div>
@@ -28,6 +26,3 @@
   </div>
 
 </div>
-<%= link_to "My fans", my_fans_fans_path %>
-<%= link_to "My incoming bookings", incoming_bookings_path %>
-<%= link_to "My outgoing bookings", outgoing_bookings_path %>
