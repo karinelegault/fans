@@ -1,9 +1,11 @@
 .container-grid {
-  margin: 0 -75px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 -100px;
+  display: flex;
+  // grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 30px;
-  grid-gap: 30px;
+  // grid-gap: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card-product-index {
