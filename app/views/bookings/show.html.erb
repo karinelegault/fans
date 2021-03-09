@@ -1,0 +1,21 @@
+<div class="container text-center">
+  <h2>Your booking was sent</h2>
+
+<table>
+  <tr>
+    <th>Fan name</th>
+    <th>Booking starting date</th>
+    <th>Booking end date</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td><%= @booking.fan.name %></td>
+    <td><%= @booking.start_date %></td>
+    <td><%= @booking.end_date %></td>
+    <td><span><%= @booking.status %></span></td>
+  </tr>
+</table>
+
+<%= link_to "Back to all fans", fans_path, class: "btn-gradient-new" %>
+</div>
+
