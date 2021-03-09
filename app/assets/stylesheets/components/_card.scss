@@ -1,9 +1,17 @@
 .container-grid {
+<<<<<<< HEAD
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+=======
+  margin: 0 -100px;
+  display: flex;
+  // grid-template-columns: 1fr 1fr 1fr;
+>>>>>>> 17e6402c83d3915059b91fd8bf30cdc15bdf524e
   margin-bottom: 30px;
-  grid-gap: 30px;
+  // grid-gap: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card-product-index {
