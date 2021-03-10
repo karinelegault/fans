@@ -1,23 +1,26 @@
 .container-grid {
-  margin: 0 -100px;
+  border-radius: 20px;
+  margin: 0 auto;
   display: flex;
   // grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 30px;
   // grid-gap: 30px;
   justify-content: space-around;
   flex-wrap: wrap;
+  background-color: white;
+  padding-bottom: 30px;
 }
 
 .card-product-index {
   overflow: hidden;
-  height: 200px;
+  height: 150px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   margin-top: 30px;
   border-radius: 16px;
-  width: 400px;
+  width: 300px;
 }
 
 .card-product-index img {
@@ -33,11 +36,13 @@
 }
 
 .card-product-index p {
+  color: #949494;
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  font-weight: lighter;
 }
 
 .card-product-index .card-product-infos-index {
