@@ -11,7 +11,7 @@
     <% @fans.each do |fan| %>
     <div class="card-grid-index">
       <div class="card-product-index">
-        <div><%= cl_image_tag fan.photo.key, height: 500, width: 300, crop: :fill %></div>
+        <div><%= cl_image_tag fan.photo.key, height: 400, width: 300, crop: :fill %></div>
         <div class="card-product-infos-index">
           <h2><%= fan.name  %></h2>
           <p><%= fan.description  %></p>

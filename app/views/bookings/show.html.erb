@@ -1,14 +1,19 @@
 <div class="container text-center">
   <h2>Your booking was sent</h2>
+  <p>The owner of the fan should accept the rental in the next few hours</p>
 
 <table>
   <tr>
+    <th>Fan photo</th>
+    <th>Fan owner</th>
     <th>Fan name</th>
     <th>Booking starting date</th>
     <th>Booking end date</th>
     <th>Status</th>
   </tr>
   <tr>
+    <td><%= @booking.fan.photo.key %></td>
+    <td><%= @booking.fan.user_id %></td>
     <td><%= @booking.fan.name %></td>
     <td><%= @booking.start_date %></td>
     <td><%= @booking.end_date %></td>
@@ -16,6 +21,5 @@
   </tr>
 </table>
 
-<%= link_to "Back to all fans", fans_path, class: "btn-gradient-new" %>
+<%= link_to "Back to all fans", root_path, class: "btn-gradient-new" %>
 </div>
-
