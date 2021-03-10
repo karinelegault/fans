@@ -23,7 +23,13 @@ class FansController < ApplicationController
 
 
      def index
+      
+      if params[:query].present?
+        @fans = Fan.search_by_name(params[:query])
+      else
         @fans = Fan.all
+      end
+
     end
 
 
