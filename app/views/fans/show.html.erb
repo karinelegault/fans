@@ -11,8 +11,12 @@
       <h2><%= @fan.name %></h2>
       <p><%= @fan.description %></p>
     </div>
-    <h2 class="card-trip-pricing">$9.99</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="card-trip-user avatar-bordered" />
+    <h2 class="card-trip-pricing">Rent for <%= @fan.price %> $ / week</h2>
+    <% if current_user.avatar.attached? %>
+      <div class="card-trip-user avatar-bordered" ><%= cl_image_tag current_user.avatar.key, height: 40, width: 40, crop: :fill, class: "avatar" %></div>
+    <% else %>
+      <%= cl_image_tag("https://res.cloudinary.com/drlbljn6y/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1615303526/michael-dam-mEZ3PoFGs_k-unsplash_byqvkv.jpg", class: "card-trip-user avatar-bordered")%>
+    <% end %>
 
 
 </div>

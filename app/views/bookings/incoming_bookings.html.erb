@@ -7,6 +7,7 @@
     <th>Booking starting date</th>
     <th>Booking end date</th>
     <th>Status</th>
+    <th>Click here to confirm the rental</th>
   </tr>
   <% @bookings.each do |booking| %>
   <tr>
@@ -14,6 +15,7 @@
     <td><%= booking.start_date %></td>
     <td><%= booking.end_date %></td>
     <td><span><%= booking.status %></span></td>
+    <td>Confirm</td>
   </tr>
   <% end %>
 </table>
