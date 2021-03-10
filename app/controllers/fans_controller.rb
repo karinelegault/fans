@@ -41,7 +41,7 @@ class FansController < ApplicationController
   private
 
   def fans_params
-    params.require(:fan).permit(:name, :description, :price, :user_id)
+    params.require(:fan).permit(:name, :description, :price, :user_id, :photo)
   end
 
 end

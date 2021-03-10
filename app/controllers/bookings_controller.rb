@@ -1,21 +1,21 @@
 class BookingsController < ApplicationController
   def new
-  
+
     @fan = Fan.find( params[:fan_id])
     @booking = Booking.new
   end
 
   def create
- 
+
     @fan = Fan.find(params[:fan_id])
     @booking = Booking.new(booking_params)
     @booking.fan = @fan
     @booking.user_id = current_user.id
     @booking.status = "pending"
     if @booking.save
-      redirect_to fan_path(@fan)
+      render "bookings/show"
     else
-      render "fans/show"
+      render "bookings/show"
     end
   end
 
@@ -30,10 +30,10 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user_id: current_user.id)
   end
 
-  
+
 
   private
-  
+
   # def start_time
   #   self.my_related_model.start ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
   # end
