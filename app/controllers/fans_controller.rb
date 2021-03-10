@@ -44,6 +44,10 @@ class FansController < ApplicationController
     @fan.destroy
   end
 
+  def my_fans
+    @fans = Fan.where(user_id: current_user.id)
+  end
+
   private
 
   def fans_params

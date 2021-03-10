@@ -65,3 +65,6 @@ gem 'devise'
 # cloudinary-images
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
+
+# Ne pas faire en prod
+gem 'activerecord-reset-pk-sequence'
