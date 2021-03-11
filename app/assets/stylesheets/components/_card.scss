@@ -13,20 +13,21 @@
 
 .card-product-index {
   overflow: hidden;
-  height: 150px;
+  height: 175px;
   background: white;
   box-shadow: 0 3px 12px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   margin-top: 30px;
   border-radius: 16px;
-  width: 300px;
+  width: 320px;
 }
 
 .card-product-index img {
   height: 100%;
-  width: 120px;
+  width: 131px;
   object-fit: cover;
+  margin-right: 7px;
 }
 
 .card-product-index h2 {
@@ -45,6 +46,11 @@
   font-weight: lighter;
 }
 
-.card-product-index .card-product-infos-index {
-  padding: 16px;
+.card-product-index  .price { 
+  color: #16c79a;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 14px;
 }
+
+

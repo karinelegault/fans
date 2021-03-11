@@ -15,13 +15,13 @@
         <div class="card-product-infos-index">
           <h2><%= fan.name  %></h2>
           <p><%= fan.description  %></p>
-          <p><%= fan.price  %></p>
-          <div>
+          <div class="price-info">
+          <p class="price">$<%= fan.price %>/per week</p>
               <%= link_to "More infos", fan_path(fan), class: "btn btn-gradient"%>
           </div>
         </div>
       </div>
- </div>
+    </div>
    <% end  %>
   </div>
 </div>
