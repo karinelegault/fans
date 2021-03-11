@@ -16,7 +16,9 @@
           <h2><%= fan.name  %></h2>
           <p><%= fan.description  %></p>
           <p><%= fan.price  %></p>
-          <div>
+          <div class="index-btn">
+       
+              <%= link_to "Book it", new_fan_booking_path(fan), class: "btn btn-gradient"%>
               <%= link_to "More infos", fan_path(fan), class: "btn btn-gradient"%>
           </div>
         </div>

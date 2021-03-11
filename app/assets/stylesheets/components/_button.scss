@@ -32,14 +32,18 @@
   display: flex;
 }
 
+.index-btn {
+  display: flex;
+}
+
 .btn-gradient {
-  font-size: 12px;
+  font-size: 9px;
   color: white;
-  padding: 6px 16px;
+  padding: 6px 10px;
   border-radius: 4px;
   font-weight: lighter;
   background: lightgrey;
-  margin-right: 5px;
+  margin: 5px;
   // transition: 0.7s ease;
 }
 
