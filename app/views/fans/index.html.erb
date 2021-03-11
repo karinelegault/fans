@@ -17,6 +17,9 @@
           <p><%= fan.description  %></p>
           <div class="price-info">
           <p class="price">$<%= fan.price %>/per week</p>
+          <div class="index-btn">
+       
+              <%= link_to "Book it", new_fan_booking_path(fan), class: "btn btn-gradient"%>
               <%= link_to "More infos", fan_path(fan), class: "btn btn-gradient"%>
           </div>
         </div>
