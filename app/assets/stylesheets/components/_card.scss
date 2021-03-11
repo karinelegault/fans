@@ -1,14 +1,13 @@
 .container-grid {
   border-radius: 20px;
-  margin: 0 auto;
+  margin: 15px auto;
   display: flex;
+  padding: 16px;
   // grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 30px;
   // grid-gap: 30px;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   background-color: white;
-  padding-bottom: 30px;
 }
 
 .card-product-index {
@@ -21,7 +20,6 @@
   margin-top: 30px;
   border-radius: 16px;
   width: 320px;
-  
 }
 
 .card-product-index img {

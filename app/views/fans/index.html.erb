@@ -12,13 +12,12 @@
     <div class="card-grid-index">
       <div class="card-product-index">
         <div><%= cl_image_tag fan.photo.key, height: 400, width: 300, crop: :fill %></div>
-        <div class="card-product-infos-index">
-          <h2><%= fan.name  %></h2>
-          <p><%= fan.description  %></p>
-          <div class="price-info">
-          <p class="price">$<%= fan.price %>/per week</p>
+          <div class="card-product-infos-index">
+            <h2><%= fan.name  %></h2>
+            <p><%= fan.description  %></p>
+            <div class="price-info">
+            <p class="price">$<%= fan.price %>/per week</p>
           <div class="index-btn">
-       
               <%= link_to "Book it", new_fan_booking_path(fan), class: "btn btn-gradient"%>
               <%= link_to "More infos", fan_path(fan), class: "btn btn-gradient"%>
           </div>
