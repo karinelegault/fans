@@ -18,7 +18,13 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+<%# <h2>Weather in <span id="city"></span> </h2> %>
+    <div class="d-flex">
+        <h3 id="date"></h3>
+        <p id="description"></p>
+        <img src="" alt="" id="icon">
+        <h2 id="weather"></h2>
+    </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
@@ -43,5 +49,19 @@
       </div>
 
 </div>
+
+<%# <div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+    <div class="card mt-5 p-3">
+    <h2>Weather in <span id="city"></span> </h2>
+    <h3 id="date"></h3>
+    <p id="description"></p>
+    <img src="" alt="" id="icon">
+    <h2 id="weather"></h2>
+    </div>
+    </div>
+  </div>
+</div> %>
 
 </div>
