@@ -1,4 +1,6 @@
 <div class="container">
+  <hr>
+  <h2 class="text-center">My Fans</h2>
   <div class="container-grid">
   <% @fans.each do |fan| %>
     <div class="card-grid-index">
@@ -17,5 +19,8 @@
    </div>
    <% end  %>
   </div>
+  <div class="container text-center">
 <%= link_to "Back to all fans", fans_path, class: "btn-gradient-new"  %>
+  </div>
+  <hr>
 </div>
