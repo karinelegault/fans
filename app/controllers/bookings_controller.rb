@@ -30,8 +30,22 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user_id: current_user.id)
   end
 
-
-
+  def accept_booking
+    @booking = Booking.find(params[:id])
+    @booking.status = "accepted"
+    @booking.save
+    incoming_bookings
+    render "incoming_bookings"
+  end
+  
+  def decline_booking
+    @booking = Booking.find(params[:id])
+    @booking.status = "declined"
+    @booking.save
+    incoming_bookings
+    render "incoming_bookings"
+  end
+  
   private
 
   # def start_time
@@ -40,4 +54,5 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:fan_id, :user_id, :start_date, :end_date, :status)
   end
+  
 end
