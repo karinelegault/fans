@@ -25,8 +25,13 @@ class FansController < ApplicationController
       @fans = Fan.where(user_id: current_user.id)
     end
 
-    def index
-      @fans = Fan.all
+     def index
+      
+      if params[:query].present?
+        @fans = Fan.search_by_name(params[:query])
+      else
+        @fans = Fan.all
+      end
     end
 
 
@@ -39,6 +44,10 @@ class FansController < ApplicationController
   def destroy
     @fan = Fan.find(params[:id])
     @fan.destroy
+  end
+
+  def my_fans
+    @fans = Fan.where(user_id: current_user.id)
   end
 
   private

@@ -1,28 +1,30 @@
-
 <div class="banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1528837995482-b88b0a83a9e4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80);">
-  <div class="container text-center mb-5">
+
+  <div class="container">
     <h1> <strong>Fans around you</strong> to <strong>creative people</strong>!</h1>
     <p>Change your life and live a fresh life.</p>
-    <%= link_to "Create New Fan", new_fan_path, class: "btn btn-gradient-new"%>
+    <%= link_to "Create Fan", new_fan_path, class: "btn btn-gradient-new"%>
   </div>
 </div>
 <div class="container">
-  <div class="container-grid">
+  <div class="container-grid d-flex">
     <% @fans.each do |fan| %>
     <div class="card-grid-index">
       <div class="card-product-index">
-        <img src="https://images.unsplash.com/photo-1612549672719-2f1a3908ae31?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80" />
-        <div class="card-product-infos-index">
-          <h2><%= fan.name  %></h2>
-          <p><%= fan.description  %></p>
-          <p><%= fan.price  %></p>
-          <div>
-              <%= link_to "More infos", fan_path(fan), class: "btn btn-flat"%>
+        <div><%= cl_image_tag fan.photo.key, height: 400, width: 300, crop: :fill %></div>
+          <div class="card-product-infos-index">
+            <h2><%= fan.name  %></h2>
+            <p><%= fan.description  %></p>
+            <div class="price-info">
+            <p class="price">$<%= fan.price %>/per week</p>
+          <div class="index-btn">
+              <%= link_to "Book it", new_fan_booking_path(fan), class: "btn btn-gradient"%>
+              <%= link_to "More infos", fan_path(fan), class: "btn btn-gradient"%>
           </div>
         </div>
       </div>
-   </div>
-   <% end  %>
+    </div>
   </div>
-
+   <% end  %>
 </div>
+

@@ -5,11 +5,11 @@
     <%= simple_form_for @fan do |f| %>
         <%= f.input :name %>
         <%= f.input :description %>
-        <%= f.input :price %>
+        <%= f.input :price%>
         <%= f.input :photo, as: :file %>
-        <%= f.button :submit, class: 'btn-gradient' %>
+        <%= f.button :submit, class: 'btn-gradient-new' %>
     <% end %>
 
   </div>
-
+<%= link_to "Back to all fans", fans_path, class: "btn-gradient-new"  %>
 </div>

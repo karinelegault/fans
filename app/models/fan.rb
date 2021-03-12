@@ -4,3 +4,11 @@ class Fan < ApplicationRecord
   validates :name, presence: true
   has_one_attached :photo
 end
+
+  include PgSearch::Model
+  pg_search_scope :search_by_name,
+    against: [ :name ],
+    using: {
+      tsearch: { prefix: true }
+    }
+end
