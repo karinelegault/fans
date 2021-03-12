@@ -46,6 +46,8 @@
 }
 
 .card-product-index p {
+  max-height: 48px;
+  overflow: hidden;
   color: #949494;
   font-size: 12px;
   line-height: 1.4;
