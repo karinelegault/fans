@@ -3,6 +3,7 @@ class Fan < ApplicationRecord
   has_many :bookings, dependent: :destroy
   validates :name, presence: true
   has_one_attached :photo
+end
 
   include PgSearch::Model
   pg_search_scope :search_by_name,

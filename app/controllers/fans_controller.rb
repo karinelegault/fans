@@ -21,6 +21,9 @@ class FansController < ApplicationController
         end
     end
 
+    def my_fans
+      @fans = Fan.where(user_id: current_user.id)
+    end
 
      def index
       
@@ -29,13 +32,12 @@ class FansController < ApplicationController
       else
         @fans = Fan.all
       end
-
     end
 
 
   def show
     @fan = Fan.find(params[:id])
-    @booking = Booking.new
+    # @booking = Booking.new
   end
 
 
