@@ -34,7 +34,7 @@ puts "Deleting Fans"
 puts "Creating Fans"
 
 file1 = URI.open('https://res.cloudinary.com/drlbljn6y/image/upload/v1615303525/call-me-fred-6KZcjJoaqNI-unsplash_d7ewhm.jpg')
-fan1 = Fan.create(user_id: "#{rand(1..3)}", name: Fanatomic plus, description: "Amazing big fan, ideal for big events like wedding" , price: "#{rand(10..300)}" )
+fan1 = Fan.create(user_id: "#{rand(1..3)}", name: "Fanatomic plus", description: "Amazing big fan, ideal for big events like wedding", price: "#{rand(10..300)}" )
 fan1.photo.attach(io: file1, filename: 'nes.jpg', content_type: 'image/jpg')
 
 puts "Fans Created"
