@@ -3,6 +3,7 @@
 
 <table>
   <tr>
+    <th>Fan photo</th>
     <th>Fan name</th>
     <th>Booking starting date</th>
     <th>Booking end date</th>
@@ -11,11 +12,12 @@
   </tr>
   <% @bookings.each do |booking| %>
   <tr>
+    <td><%= cl_image_tag(booking.fan.photo.key, height: 80, width: 80, crop: :fill)%></td>
     <td><%= booking.fan.name %></td>
     <td><%= booking.start_date %></td>
     <td><%= booking.end_date %></td>
     <td><span><%= booking.status %></span></td>
-    <td>Confirm</td>
+    <td>Confirm Decline</td>
   </tr>
   <% end %>
 </table>

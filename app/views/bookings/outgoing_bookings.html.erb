@@ -3,8 +3,8 @@
 
 <table>
   <tr>
-    <th>Fan photo</th>
     <th>Fan owner</th>
+    <th>Fan photo</th>
     <th>Fan name</th>
     <th>Booking starting date</th>
     <th>Booking end date</th>
@@ -12,8 +12,8 @@
   </tr>
   <% @bookings.each do |booking| %>
   <tr>
-    <td><%= booking.fan.photo.key %></td>
-    <td><%= booking.fan.user_id %></td>
+    <td><%= cl_image_tag(booking.fan.user.avatar.key, class: "avatar", height: 40, width: 40, crop: :fill) %><br><%= booking.fan.user.email %></td>
+    <td><%= cl_image_tag(booking.fan.photo.key, height: 80, width: 80, crop: :fill)%></td>
     <td><%= booking.fan.name %></td>
     <td><%= booking.start_date %></td>
     <td><%= booking.end_date %></td>
@@ -24,3 +24,4 @@
 
 <%= link_to "Back to all fans", root_path, class: "btn-gradient-new" %>
 </div>
+
