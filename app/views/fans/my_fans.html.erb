@@ -1,7 +1,11 @@
 <div class="container">
   <hr>
   <h2 class="text-center">My Fans</h2>
-  <div class="container-grid">
+  <div class="container-grid d-flex">
+  <div class="container text-center">
+    <%= link_to "Back to all fans", fans_path, class: "btn-gradient-new"  %>
+    <%= link_to "Create Fan", new_fan_path, class: "btn-gradient-new"%>
+  </div>
   <% @fans.each do |fan| %>
     <div class="card-grid-index">
       <div class="card-product-index">
@@ -19,10 +23,6 @@
       </div>
    </div>
    <% end  %>
-  </div>
-  <div class="container text-center">
-    <%= link_to "Back to all fans", fans_path, class: "btn-gradient-new"  %>
-    <%= link_to "Create Fan", new_fan_path, class: "btn-gradient-new"%>
   </div>
   <hr>
 </div>
