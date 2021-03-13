@@ -15,23 +15,25 @@
       <td><%= booking.fan.name %></td>
       <td><%= booking.start_date %></td>
       <td><%= booking.end_date %></td>
-      <td><div class="dropdown">
-    <% button_color =  case booking.status %>
-    <% when "accepted" %>
-      <% "btn-success" %>
-    <% when "declined" %>
-      <% "btn-danger" %>
-    <% when "pending" %>
-      <% "btn-secondary" %>
-    <% end %>
-      <button class="btn <%= button_color %> dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <%= booking.status %>
-      </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <button class="dropdown-item "><%= link_to "Accept", accept_booking_path(booking), method: :patch,  class: "dropdown-item " %></button>
-      <button class="dropdown-item "><%= link_to "Decline", decline_booking_path(booking), method: :patch, class: "dropdown-item "%></button>
-    </div>
-  </div></td>
+      <td>
+        <div class="dropdown">
+          <% button_color =  case booking.status %>
+          <% when "accepted" %>
+            <% "btn-success" %>
+          <% when "declined" %>
+            <% "btn-danger" %>
+          <% when "pending" %>
+            <% "btn-secondary" %>
+          <% end %>
+            <button class="btn <%= button_color %> dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= booking.status %>
+            </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button class="dropdown-item "><%= link_to "Accept", accept_booking_path(booking), method: :patch,  class: "dropdown-item " %></button>
+            <button class="dropdown-item "><%= link_to "Decline", decline_booking_path(booking), method: :patch, class: "dropdown-item "%></button>
+          </div>
+        </div>
+      </td>
     </tr>
   <% end %>
 </table>

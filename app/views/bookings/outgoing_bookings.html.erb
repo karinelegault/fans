@@ -17,7 +17,18 @@
     <td><%= booking.fan.name %></td>
     <td><%= booking.start_date %></td>
     <td><%= booking.end_date %></td>
-    <td><span><%= booking.status %></span></td>
+    <% accepted_display = ["success", "accepted"]%>
+    <% declined_display = ["danger", "declined"]%>
+    <% pending_display = ["secondary", "pending"]%>
+    <% button_displayed = case booking.status %>
+     <% when "accepted" %>
+        <% accepted_display  %>
+      <% when "declined" %>
+        <% declined_display %>
+      <% when "pending" %>
+        <% pending_display %>  
+    <% end %>
+     <td><button class="btn btn-<%= button_displayed[0]  %>" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= button_displayed[1] %></button></td>
   </tr>
   <% end %>
 </table>

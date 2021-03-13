@@ -1,9 +1,15 @@
 <div class="container">
 
-<%= simple_form_for @fan do |f| %>
+  <div class="form-card">
+
+    <%= simple_form_for @fan do |f| %>
         <%= f.input :name %>
         <%= f.input :description %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
+        <%= f.input :price, label: "Price/Week" %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit, class: 'btn-gradient-new' %>
     <% end %>
 
+  </div>
+<%= link_to "Back to all fans", fans_path, class: "btn-gradient-new"  %>
 </div>
