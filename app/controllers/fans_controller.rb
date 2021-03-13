@@ -4,13 +4,6 @@ class FansController < ApplicationController
     def new
         @fan = Fan.new
     end
-# No need for edit right now, therefore  I comment it out (paslm)
-    # def edit
-    #     # raise
-    #     @fan.update(params[:id])
-    #     redirect_to fans_path(@fans)
-    # end
-
     def create
         @fan = Fan.new(fans_params)
         @fan.user = current_user
@@ -21,6 +14,14 @@ class FansController < ApplicationController
         end
     end
 
+    def edit
+      @fan = Fan.find(params[:id])
+  end
+  def update
+      @fan = fan.find(params[:id])
+      @fan.update(fans_params)
+      redirect_to fan_path(@fan)
+  end
     def my_fans
       @fans = Fan.where(user_id: current_user.id)
     end
