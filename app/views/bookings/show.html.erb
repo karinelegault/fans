@@ -12,7 +12,7 @@
     <th>Status</th>
   </tr>
   <tr>
-    <td><%= @booking.fan.photo.key %></td>
+    <td><%= cl_image_tag(@booking.fan.photo.key, height: 80, width: 80, crop: :fill)%></td>
     <td><%= @booking.fan.user_id %></td>
     <td><%= @booking.fan.name %></td>
     <td><%= @booking.start_date %></td>
