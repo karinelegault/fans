@@ -54,18 +54,17 @@
 }
 
 .btn-gradient-new {
-  color: black;
-  padding: 8px 34px;
-  // border: 1px solid white;
+  color: white;
+  padding: 8px 24px;
   border-radius: 4px;
-  font-weight: lighter;
-  background: rgba(255, 255, 255, 0.623);
-  transition: 0.3s ease;
+  background: #f05454;
+  transition: background 0.3s ease;
 }
 
 .btn-gradient-new:hover {
   background: white;
   color: #f05454;
+  text-decoration: none;
 }
 
 .btn-status {
