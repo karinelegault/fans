@@ -22,10 +22,10 @@
     <div class="d-flex">
         <h3 id="date">Saturday, March 13, 2021</h3>
         <p id="description"></p>
-        <img src="http://www.clipartbest.com/cliparts/dc6/eMn/dc6eMnozi.png" alt="" id="icon">
+        <%= cl_image_tag("https://res.cloudinary.com/drlbljn6y/image/upload/v1615655986/sun_kpovei.png", class: "img", id: "icon") %>
         <h2 id="weather">9°C</h2>
     </div>
-    
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
